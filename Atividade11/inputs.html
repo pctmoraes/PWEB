@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alterando o texto</title>
+</head>
+
+<body>
+    <p>Digite seu texto:</p>
+    <input name="texto" type="text" id="texto" size="82" maxlength="255">   
+    <br>
+    <br>
+    <span>Maiúscula:</span>
+    <input type="checkbox" id="maxInp" onchange="max()">
+    <br>
+    <br>
+    <span>Minúscula:</span>
+    <input type="checkbox" id="minInp" onchange="min()">
+    <script>
+        let max = document.getElementById("maxInp");
+        let min = document.getElementById("minInp");
+
+        function max() {
+            if (maxInp.checked) {
+                minInp.checked = false;
+                var crt = document.getElementById('texto').value;
+                document.getElementById('texto').value = crt.toUpperCase();
+            }
+        }
+
+        function min() {
+            if (minInp.checked) {
+                maxInp.checked = false;
+                var crt = document.getElementById('texto').value;
+                document.getElementById('texto').value = crt.toLowerCase();
+            }
+        }
+    </script>
+</body>
+
+</html>
