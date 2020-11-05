@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cursos FATEC</title>
+</head>
+
+<body>
+    <h1>Faculdade de Tecnologia de Sorocaba</h1><br>
+
+    <h3>Selecione o curso que deseja visitar</h3>
+
+    <form>
+        <label for="cursos">Cursos:</label>
+        <select name="cursos" id="cursos">
+            <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+            <option value="EA">Eletrônica Automotiva</option>
+            <option value="SB">Sistemas Biomédicos</option>
+            <option value="POL">Polímeros</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Ok" onclick="recuperaSelecao()">
+    </form>
+
+</body>
+
+<script>
+
+        function recuperaSelecao() {
+            var selecao = document.getElementById('cursos').value;
+            
+            if (selecao == "ADS"){
+                window.open("http://www.fatecsorocaba.edu.br/curso_ads.asp"); 
+            }
+            if (selecao == "EA"){
+                window.open("http://www.fatecsorocaba.edu.br/curso_ea.asp");
+            }  
+            if (selecao == "SB"){
+                window.open("http://www.fatecsorocaba.edu.br/curso_sb.asp");
+            }
+            if (selecao == "POL"){
+                window.open("http://www.fatecsorocaba.edu.br/curso_pol.asp");
+            }     
+        }
+
+    </script>
+</body>
+
+</html>
